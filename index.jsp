@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>首页</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- basic styles -->
@@ -274,7 +276,7 @@
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎回来，</small>
-									“用户名”
+									<%=session.getAttribute("name") %>
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -298,7 +300,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="/SFTM/ExitServlet">
 										<i class="icon-off"></i>
 										退出
 									</a>
@@ -357,318 +359,53 @@
 
 					<ul class="nav nav-list">
 						<li class="active">
-							<a href="index.html">
+							<a href="index.jsp">
 								<i class="icon-home home-icon"></i>
 								<span class="menu-text"> 首页 </span>
 							</a>
 						</li>
 
 						<li>
-							<a href="typography.html">
-								<i class="icon-text-width"></i>
-								<span class="menu-text"> 文字排版 </span>
-							</a>
-						</li>
-
-						<li>
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
-								<span class="menu-text"> UI 组件 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="elements.html">
-										<i class="icon-double-angle-right"></i>
-										组件
-									</a>
-								</li>
-
-								<li>
-									<a href="buttons.html">
-										<i class="icon-double-angle-right"></i>
-										按钮 &amp; 图表
-									</a>
-								</li>
-
-								<li>
-									<a href="treeview.html">
-										<i class="icon-double-angle-right"></i>
-										树菜单
-									</a>
-								</li>
-
-								<li>
-									<a href="jquery-ui.html">
-										<i class="icon-double-angle-right"></i>
-										jQuery UI
-									</a>
-								</li>
-
-								<li>
-									<a href="nestable-list.html">
-										<i class="icon-double-angle-right"></i>
-										可拖拽列表
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="dropdown-toggle">
-										<i class="icon-double-angle-right"></i>
-
-										三级菜单
-										<b class="arrow icon-angle-down"></b>
-									</a>
-
-									<ul class="submenu">
-										<li>
-											<a href="#">
-												<i class="icon-leaf"></i>
-												第一级
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="dropdown-toggle">
-												<i class="icon-pencil"></i>
-
-												第四级
-												<b class="arrow icon-angle-down"></b>
-											</a>
-
-											<ul class="submenu">
-												<li>
-													<a href="#">
-														<i class="icon-plus"></i>
-														添加产品
-													</a>
-												</li>
-
-												<li>
-													<a href="#">
-														<i class="icon-eye-open"></i>
-														查看商品
-													</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-list"></i>
-								<span class="menu-text"> 表格 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="tables.html">
-										<i class="icon-double-angle-right"></i>
-										简单 &amp; 动态
-									</a>
-								</li>
-
-								<li>
-									<a href="jqgrid.html">
-										<i class="icon-double-angle-right"></i>
-										jqGrid plugin
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-edit"></i>
-								<span class="menu-text"> 表单 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										表单组件
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										向导提示 &amp; 验证
-									</a>
-								</li>
-
-								<li>
-									<a href="wysiwyg.html">
-										<i class="icon-double-angle-right"></i>
-										编辑器
-									</a>
-								</li>
-
-								<li>
-									<a href="dropzone.html">
-										<i class="icon-double-angle-right"></i>
-										文件上传
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="widgets.html">
-								<i class="icon-list-alt"></i>
-								<span class="menu-text"> 插件 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="calendar.html">
-								<i class="icon-calendar"></i>
-
-								<span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-										<i class="icon-warning-sign red bigger-130"></i>
-									</span>
-								</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="gallery.html">
-								<i class="icon-picture"></i>
-								<span class="menu-text"> 相册 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-tag"></i>
-								<span class="menu-text"> 更多页面 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="profile.html">
-										<i class="icon-double-angle-right"></i>
-										用户信息
-									</a>
-								</li>
-
-								<li>
-									<a href="inbox.html">
-										<i class="icon-double-angle-right"></i>
-										收件箱
-									</a>
-								</li>
-
-								<li>
-									<a href="pricing.html">
-										<i class="icon-double-angle-right"></i>
-										售价单
-									</a>
-								</li>
-
-								<li>
-									<a href="invoice.html">
-										<i class="icon-double-angle-right"></i>
-										购物车
-									</a>
-								</li>
-
-								<li>
-									<a href="timeline.html">
-										<i class="icon-double-angle-right"></i>
-										时间轴
-									</a>
-								</li>
-
-								<li>
-									<a href="login.html">
-										<i class="icon-double-angle-right"></i>
-										登录 &amp; 注册
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-file-alt"></i>
-
-								<span class="menu-text">
-									其他页面
-									<span class="badge badge-primary ">5</span>
-								</span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="faq.html">
-										<i class="icon-double-angle-right"></i>
-										帮助
-									</a>
-								</li>
-
-								<li>
-									<a href="error-404.html">
-										<i class="icon-double-angle-right"></i>
-										404错误页面
-									</a>
-								</li>
-
-								<li>
-									<a href="error-500.html">
-										<i class="icon-double-angle-right"></i>
-										500错误页面
-									</a>
-								</li>
-
-								<li>
-									<a href="grid.html">
-										<i class="icon-double-angle-right"></i>
-										网格
-									</a>
-								</li>
-
-								<li>
-									<a href="blank.html">
-										<i class="icon-double-angle-right"></i>
-										空白页面
-									</a>
-								</li>
-							</ul>
-						</li>
-						
-						<li>
-							<a href="todo-list.html">
 								<i class="icon-list-alt"></i>
 								<span class="menu-text"> 待办事宜 </span>
+
+								<b class="arrow icon-angle-down"></b>
 							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="todo-list.jsp">
+										<i class="icon-double-angle-right"></i>
+										待办事项列表
+									</a>
+								</li>
+
+								<li>
+									<a href="businessInfo.jsp">
+										<i class="icon-double-angle-right"></i>
+										经营情报审批
+									</a>
+								</li>
+								
+								<li>
+									<a href="InfoRelease.jsp">
+										<i class="icon-double-angle-right"></i>
+										信息发布审批
+									</a>
+								</li>
+							</ul>
 						</li>
 						
 						<li>
-							<a href="inbox.html">
+							<a href="inbox.jsp">
 								<i class="icon-envelope"></i>
 								<span class="menu-text"> 邮件 </span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="calendar.html">
+							<a href="calendar.jsp">
 								<i class="icon-calendar"></i>
 
 								<span class="menu-text">
@@ -758,7 +495,7 @@
 
 												<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
 													<div class="inline position-relative">
-															<span class="white">ZhangSan</span>
+															<span class="white"><%=session.getAttribute("name") %></span>
 
 													</div>
 												</div>
@@ -800,14 +537,14 @@
 
 											<p>
 											<span class="badge badge-grey">!</span>
-											张三，早上好！
+											<%=session.getAttribute("name") %>，早上好！
 												<strong>
 													是否去查看今天的业务？
 												</strong>
 											</p>
 
 											<p>
-												<button class="btn btn-info">立即查看</button>
+												<button class="btn btn-info" onclick="window.location.href='todo-list.jsp'">立即查看</button>
 												<button class="btn btn">稍后再看</button>
 											</p>
 										</div>
@@ -817,7 +554,7 @@
 													<div class="profile-info-name"> 姓名 </div>
 
 													<div class="profile-info-value">
-														<span class="editable editable-click" id="name">张三</span>
+														<span class="editable editable-click" id="name"><%=session.getAttribute("real_name") %></span>
 													</div>
 												</div>
 
@@ -1191,4 +928,3 @@
 	<div style="display:none"><script src='assets/stat.php' language='JavaScript' charset='gb2312'></script></div>
 </body>
 </html>
-

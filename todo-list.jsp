@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>待办事宜</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -276,7 +278,7 @@
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎回来，</small>
-									“用户名”
+									<%=session.getAttribute("name") %>
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -300,7 +302,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="/SFTM/ExitServlet">
 										<i class="icon-off"></i>
 										退出
 									</a>
@@ -359,28 +361,53 @@
 
 					<ul class="nav nav-list">
 						<li>
-							<a href="index.html">
+							<a href="index.jsp">
 								<i class="icon-home home-icon"></i>
 								<span class="menu-text"> 首页 </span>
 							</a>
 						</li>
 						
-						<li class="active">
-							<a href="todo-list.html">
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
 								<i class="icon-list-alt"></i>
 								<span class="menu-text"> 待办事宜 </span>
+
+								<b class="arrow icon-angle-down"></b>
 							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="todo-list.jsp">
+										<i class="icon-double-angle-right"></i>
+										待办事项列表
+									</a>
+								</li>
+
+								<li>
+									<a href="businessInfo.jsp">
+										<i class="icon-double-angle-right"></i>
+										经营情报审批
+									</a>
+								</li>
+								
+								<li>
+									<a href="InfoRelease.jsp">
+										<i class="icon-double-angle-right"></i>
+										信息发布审批
+									</a>
+								</li>
+							</ul>
 						</li>
 						
 						<li>
-							<a href="inbox.html">
+							<a href="inbox.jsp">
 								<i class="icon-envelope"></i>
 								<span class="menu-text"> 邮件 </span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="calendar.html">
+							<a href="calendar.jsp">
 								<i class="icon-calendar"></i>
 
 								<span class="menu-text">
@@ -409,9 +436,10 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="icon-home home-icon"></i>
-								<a href="index.html">首页</a>
+								<a href="index.jsp">首页</a>
 							</li>
 							<li class="active">待办事宜</li>
+							<li class="active">待办事项列表</li>
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
